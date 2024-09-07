@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css filters</title>
+    <style>
+        .conatiner {
+            background-color: steelblue;
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background-color: blue;
+            height: 30vh;
+            width: 30vw;
+            filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .box1 {
+            background-color: blue;
+            height: 30vh;
+            width: 30vw;
+
+            border-radius: 10px;
+            filter: brightness(150%);
+        }
+
+        .box2 {
+            background-color: blue;
+            height: 30vh;
+            width: 30vw;
+
+            border-radius: 10px;
+            filter: grayscale();
+        }
+
+        .box3 {
+            background-color: blue;
+            height: 30vh;
+            width: 30vw;
+
+            border-radius: 10px;
+            filter: sepia() blur(5px);
+        }
+
+        .box4 {
+            background-color: blue;
+            height: 30vh;
+            width: 30vw;
+
+            border-radius: 10px;
+            filter: opacity(0.5);
+            display: grid;
+            grid-template-areas: "main main main";
+        }
+
+
+        .img1 {
+            grid-area: nav;
+        }
+
+        p {
+            color: white;
+            grid-area: nav;
+        }
+
+
+        img {
+
+            height: 30vh;
+            width: 30vw;
+            object-fit: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+
+        <div class="box"></div>
+        <div class="box1"><img src="images.png"></div>
+        <div class="box2"><img src="images.png"></div>
+        <div class="box3"><img src="images.png"></div>
+        <div class="box4"><img class="img1" src="images.png">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus suscipit, id neque veritatis minima
+                ipsam animi laborum quas laudantium sunt cupiditate velit pariatur dolores, ad nostrum error optio
+                incidunt.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
